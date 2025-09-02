@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loyolty</title>
+    <link rel="preconnet" hrfe="https://fonts.googleapis.com">
+    <link rel="preconnet" hrfe="https://fonts.gstatic.com" crossorigin>
+    <link rel="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+    <link rel="website" href="image/logoroxa.jpeg">
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+
+<body>
+    <header class="nav">
+        <div class="inner container">
+            <div class="brand">
+                <div class="logo floaty" aria-hidden="true"></div>
+                <div>Loyo<span style="color:var(--acc)">lty</span></div>
+                <span class="chip">beta</span>
+            </div>
+            <div class="hstack">
+                <button id="btnOpenLogin" class="btn ghost">Entrar</button>
+                <button id="btnLogout" class="btn danger hidden">Sair</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!--AUTH-->
+        <section id="authSection" class="auth-wrapper">
+            <div class="auth-hero glass">
+                <h1>Crie, edite e compartilhe</h1>
+                <p>Editor simples de <b>fotos</b>(com filtros e exportação) e ferramenta de <b>vídeo</b>(filtros e
+                    recorte com gravação). Incluindo login/cadastro local e galeria para divulgação.</p>
+                <div style="margin-top: 16px" class="hstack">
+                    <span class="chip">Sombra & animações</span>
+                    <span class="chip">Sem backend</span>
+                    <span class="chip">LocalStorage</span>
+                </div>
+                <div style="margin-top: 18px" class="hstack">
+                    <button class="btn" onclick="demoFill()">Usar dados de demonstração</button>
+                </div>
+            </div>
+            <div class="glass">
+                <form id="loginForm" class="auth" autocomplete="on">
+                    <h3 style="margin: 0 0 4px">Entrar</h3>
+                    <div class="field">
+                        <label for="loginEmail">E-mail</label>
+                        <input id="loginEmail" class="input" type="email" required placeholder="voce@email.com">
+                    </div>
+                    <div class="field">
+                        <label for="loginPass">Senha</label>
+                        <input id="loginPass" class="input" type="password" required placeholder=".........">
+                    </div>
+                    <button class="btn" type="submit">Entrar</button>
+                    <p class="switch-auth">Não tem conta?</p>
+                
+                </form>
+
+                <form id="signupForm" class="auth hidden" autocomplete="on">
+                    <h3 style="margin: 0 0 4px">Cadastre-se</h3>
+                    <div class="field">
+                        <label for="signName">Nome</label>
+                        <input id="signName" class="input" required placeholder="Seu nome">
+                    </div>
+                    <div class="field">
+                        <label for="signEmail"></label>
+                        <input id="signEmail" class="input" type="email" required placeholder="voce@email.com">
+                    </div>
+                    <div class="field">
+                        <label for="signPass">Senha</label>
+                        <input form="signPass" class="input" type="password" minlength="6" required
+                            placeholder="min. 6 caracteres">
+                    </div>
+                    <button class="btn" type="submit">Criar conta</button>
+                    <p class="switch-auth">Já tem conta?</p>
+                   
+                </form>
+            </div>
+        </section>
+
+        <!--DASHBOARD-->
+        <section id="dashSection" class="dash hidden">
+            <aside class="side glass">
+                <div class="group">
+                    <h4>Navegação</h4>
+                    <div class="tabs">
+                        <div class="tab active" data-tab="foto">Editor de foto</div>
+                        <div class="tab" data-tab="video">Ferramentas de vídeo</div>
+                        <div class="tab" data-tab="galeria">Galeria</div>
+                    </div>
+                </div>
+                <div class="group">
+                    <h4>Conta</h4>
+                    <div class="vstack">
+                        <div><span class="chip" id="chipUser">-</span></div>
+                        <button id="btnClearData" class="btn ghost">Limpar meus dados</button>
+                    </div>
+                </div>
+                <div class="group">
+                    <h4>Dicas</h4>
+                    <div class="vstack">
+                        <small class="muted">As edições de <b>foto</b> podem ser <b>baixadas</b> (PNG/JPG) via
+                            Canvas.</small>
+                        <small class="muted">Para <b>vídeo</b>, usamos <i>MediaRecorder</i> para gravar o trecho
+                            recortado como webM em navegadores compatíveis.</small>
+                    </div>
+                </div>
+            </aside>
+
+            <div class="workspace">
+                <!--FOTO-->
+                <section id="tab-foto" class="card">
+                    <h3>Editor de fotos</h3>
+                    <div class="tools">
+                        <label class="btn">
+                            <button class="btn">Carregar Imagem</button>
+                        </label>
+                        <button class="btn" id="bynResetImg">Resetar</button>
+                        <button class="btn" id="btnDownloadPNG">Baixar PNG</button>
+                        <button class="btn" id="btnDownloadJPG">Baixar JPG</button>
+                    </div>
+
+                    <div class="editor-grid" style="margin-top:12px">
+                        <div class="controls glass">
+                            <div class="control">
+                                <h3>hdgdjhfdhjhfjjhsfjhs</h3>
+                            </div>
+                            <div class="hstack" style="margin-top: 6px">
+                               
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!--GALERIA-->
+        <section id="tab-galeria" class="card hidden">
+            <h3>Divulgação</h3>
+            <div class="tools">
+                <label class="btn"></label>
+            <div class="gallery" id="galleryGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container" style="opacity:.7; padding:10px 0 40px">
+        <small>&copy; 2025/V3 - Emanuel, Fernando, Joanna, Lucas e Zaya</small>
+    </footer>
+
+    <script src="./js/index.js" defer></script>
+</body>
+</html> 

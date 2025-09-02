@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: antiquewhite;
+    font-family: "Raleway", sans-serif;
+}
+h2  {
+    color: white;
+    font-family: "Raleway", sans-serif;
+}
+
+h5 {
+    color: antiquewhite;
+    font-family: "Raleway", sans-serif;
+}
+
+button {
+    justify-content: center;
+    background-color: #271950;
+    color: white;
+    width: 40;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: white;
+    font-family: arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px;
+}
+
+.container input,
+.container button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+#container {
+    background-color: #18161B;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+}
+
+#imagem {
+    width: 50dvw;
+    height: 100dvh;
+}
+
+#loginContainer {
+    height: 100dvh;
+    display: flex;
+    width: 60dvw;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#card {
+    background-color: #36343D;
+    width: 23.073dvw;
+    height: 50dvh;
+    opacity: 20%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.57);
+}
+
+
+#card span {
+    align-self: flex-end;
+}
+
+.loginInput {
+    width: 17.4dvw;
+    height: 5dvh;
+    bottom: 40px;
+    border-radius: 0.3rem;
+    border: 1px solid rgb(24, 22, 27, 0.8);
+    color: rgba(255, 255, 255, 0.57);
+}
+
+.loginInput::placeholder {
+    padding-left: 1em;
+}
+
+.divCardTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding-top: 1em;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.divInterna {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-bottom: 3em;
+}
+
+.cardFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: 2em;
+}
+
+.btnSubmit {
+    background-color: #271950;
+    border-radius: 20px;
+    width: 17.4dvw;
+    height: 5dvh;
+}
+
+.bg {
+    background-color: red;
+}
+
+.b1 {
+    background-color: green;
+}
+
+.b2 {
+    background-color: yellow;
+}
