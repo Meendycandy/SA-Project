@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/img/logo_download.png);
+    background-attachment: fixed;
+}
+
+h1 {
+    color: white;
+    font-family: "Raleway", sans-serif;
+}
+
+h2 {
+    color: antiquewhite;
+    font-family: "Raleway", sans-serif;
+}
+
+button {
+    justify-content: center;
+    right: 1cm;
+    background-color: #271950;
+    color: white;
+    width: 40;
+}
+
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px;
+}
+
+.container input,
+.container button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.cardFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding-bottom: 2em;
+}
+
+#card {
+    background-color: #36343D;
+    width: 23.073dvw;
+    height: 50dvh;
+    opacity: 20%;
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.57);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.divCardTop {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    gap: 1em;
+    padding-top: 1em;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.btnSubmit {
+    background-color: #271950;
+    border-radius: 20px;
+    width: 17.4dvw;
+    height: 5dvh;
+}
+
+#container {
+    background-color: #18161B;
+    justify-content: center;
+    align-items: center;
+    width: 100dvw;
+    height: 100dvh;
+    display: flex;
+}
